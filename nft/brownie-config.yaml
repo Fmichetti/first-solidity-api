@@ -1,8 +1,18 @@
+dotenv: .env
 dependencies:
   - OpenZeppelin/openzeppelin-contracts@4.5.0
   - smartcontractkit/chainlink-brownie-contracts@0.4.0
-compiler: 
+compiler:
   solc:
     remappings:
-      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.5.0'
-      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@0.4.0'
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.5.0"
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.4.0"
+wallets:
+  from_key: ${PRIVATE_KEY}
+  from_mnemonic: ${MNEMONIC}
+networks:
+  default: development
+  rinkeby:
+    vrf_coordinator: '0x271682DEB8C4E0901D1a1550aD2e64D568E69909'
+    link_token: '0x01BE23585060835E02B77ef475b0Cc51aA1e0709'
+    keyhash: '0x8af398995b04c28e9951adb9721ef74c74f93e6a478f39e7e0777be13527e7ef'
