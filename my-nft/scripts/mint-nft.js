@@ -1,3 +1,5 @@
+// TODO: Automatizar essa parte de mint do nft
+
 require("dotenv").config()
 const API_URL = process.env.API_URL
 const PUBLIC_KEY = process.env.PUBLIC_KEY
